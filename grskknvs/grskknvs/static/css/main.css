@@ -1,0 +1,126 @@
+html{
+    /* width: 99vw; */
+}
+
+.nav {
+    padding-left: 0;
+    background-color: rgb(0, 0, 0);
+    margin-top: 10px;
+    /* width: 100vw; */
+}
+.nav a {
+    display: inline;
+    list-style-type: none;
+
+}
+.container {
+    /* width: 100vw; */
+    margin: 0 auto;
+    background-color: rgb(255, 255, 255);
+}
+.content {
+    float: left;
+    width: 80%;
+}
+.sidebar {
+    float: left;
+    width: 20%;
+}
+
+.text_container {
+    margin-bottom: 20px;
+    background-color: rgba(0, 0, 0, 0.411);
+    border-radius: 5px;
+    width:70vw;
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+}
+
+.text_white {
+    color: rgb(31, 31, 31);
+    text-align: center;
+    padding-top: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.site-text {
+    display: block;
+    margin: auto;
+
+}
+
+.site-text p {
+    display: block;
+    margin: auto;
+    margin-bottom: 40px;
+    margin-top: 40px;
+
+}
+
+.specials_container {
+    display: block;
+    margin: auto;
+    /* width: 100vw; */
+    margin-top: 40px;
+    margin-left: 80px;
+}
+
+.daily_specials {
+    margin-top: 20px;
+    /* padding-left: 60px; */
+    /* padding: 20px; */
+    display: inline-block;
+    height: 250px;
+    margin: auto;
+
+
+}
+
+.daily_specials a {
+   width: 20px;
+   text-decoration: none;
+}
+
+.daily_specials img {
+    padding: 10px;
+    max-width: 200px;
+    margin: auto;
+
+
+}
+
+.daily_specials figure {
+    width: 200px;
+    display: inline-block;
+}
+
+.daily_specials figcaption {
+    text-decoration: none;
+    color: white;
+    max-width: 200px;
+    text-align: center;
+}
+
+.featured_product {
+    background-image: url(/media/10.JPG);
+    background-size: 100vw;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 470px;
+    width: 100vw;
+    padding-top: 40px;
+    padding-bottom: 40px !important;
+}
+
+.text {
+    padding-top:2vw;
+}
+
+.content_container img {
+    width: 100vw;
+}
