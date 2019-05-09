@@ -1,5 +1,6 @@
 html{
     /* width: 99vw; */
+    background-color: rgb(236, 236, 236);
 }
 
 
@@ -21,7 +22,12 @@ html{
     height: 100px;
 }
 
-.blackground a {
+.bottom_black {
+    transform: translate(0px, -20px);
+    max-height: 25px;
+}
+
+.blackground .translate {
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     text-decoration: none;
@@ -54,7 +60,7 @@ html{
 .container {
     /* width: 100vw; */
     margin: 0 auto;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(236, 236, 236);
     display: block;
     margin: auto;
 }
@@ -109,27 +115,52 @@ html{
     display: block;
     margin: auto;
     /* width: 100vw; */
-    margin-top: 40px;
-    margin-left: 15%;
+    margin-top: 100px;
+    /* margin-left: 15%; */
 }
 
 .daily_specials {
-    margin-top: 20px;
+    display: block;
+    margin: auto;
+    /* width: 780px; */
+    transform: translate(20px, 0px);
+
+}
+
+iframe {
+    display: block;
+    width: 710px;
+    height: 500px;
+    margin: auto;
+    /* margin-top: 80px; */
+    box-shadow: 10px 10px 10px rgb(161, 159, 159);
+
+    /* margin-left: -20px; */
+}
+
+.daily_specials_inner {
     /* padding-left: 60px; */
     /* padding: 20px; */
     display: inline-block;
-    height: 250px;
-    margin: auto;
+    /* height: 250px; */
+    /* margin: auto; */
+    border-color: black;
+    border-style: solid;
+    margin: 10px;
+    border-width: 1px;
+    box-shadow: 10px 10px 10px rgb(161, 159, 159);
+    /* background-color: rgba(0, 0, 0, 0.336); */
+    z-index: 0;
 
 
 }
 
-.daily_specials a {
+.daily_specials_inner a {
    width: 20px;
    text-decoration: none;
 }
 
-.daily_specials img {
+.daily_specials_inner img {
     padding: 10px;
     width: 200px;
     margin: auto;
@@ -137,12 +168,57 @@ html{
 
 }
 
-.daily_specials figure {
-    width: 200px;
-    display: inline-block;
+.video {
+    margin-top: 100px;
 }
 
-.daily_specials figcaption {
+.comment {
+    height: 100px;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width:100%;
+    z-index: 1;
+    margin-top: 0px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.308);
+
+  }
+
+  .hide{
+      display: none;
+  }
+
+  .sticky  .content-2 {
+    top: 0;
+    z-index: 1;
+    transform: translate(-60px, 0px);
+  }
+
+.contact {
+    background-color: rgb(131, 130, 130);
+    color: white;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    border-style: solid;
+    border-width: 1px;
+    width: 500px;
+    padding-bottom: 20px;
+    margin: auto;
+    margin-top: 100px;
+    box-shadow: 10px 10px 10px rgb(161, 159, 159);
+
+
+
+}
+
+.daily_specials_inner figure {
+    width: 200px;
+    /* display: inline-block; */
+}
+
+.daily_specials_inner figcaption {
     text-decoration: none;
     color: white;
     max-width: 200px;
@@ -169,6 +245,52 @@ html{
     /* width: 100vw; */
 }
 
+.dropdown {
+    float: left;
+    overflow: hidden;
+  }
+
+  .dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: rgb(255, 255, 255);
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+  }
+
+
+  .navbar a:hover, .dropdown:hover .dropbtn {
+      font-family: Arial, Helvetica, sans-serif;
+      float: right;
+    background-color: rgb(109, 109, 109);
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  .dropdown-content a {
+    text-decoration: none;
+    display: block;
+
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
 
 @media only screen and (max-width: 600px) {
     .featured_product {
@@ -177,11 +299,10 @@ html{
     }
 
     .specials_container {
-        display: block;
+
         margin: auto;
         width: 100%;
         margin-top: 40px;
-        /* margin-left: 20%; */
     }
     .daily_specials {
         width: 100%;
@@ -189,9 +310,20 @@ html{
         margin-top: 15px;
     }
 
+    .nav {
+        display: none;
+    }
+
+    iframe {
+        width: 360px;
+height: 200px;
+margin-left: -20px;
+    }
+
     .daily_specials img {
         width: 100%;
         margin: auto !important;
         padding: 0px;
+
     }
   }

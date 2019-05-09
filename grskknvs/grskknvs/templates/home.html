@@ -4,28 +4,43 @@
 {% block title %}{% page_attribute "page_title" %}{% endblock title %}
 
 {% block content %}
-    <div class="featured_product">
-            <div class="text_container">
+<div class="featured_product">
+    <div class="text_container">
         <div class="text site-text">
-        {% placeholder "featured_product" %}
-        <div class="site-text">
-            {% placeholder "text" %}
-        </div>
+            {% placeholder "featured_product" %}
+            <div class="site-text">
+                {% placeholder "text" %}
+            </div>
 
         </div>
 
     </div>
-    </div>
-    <div class="specials_container">
+</div>
+<div class="blackground bottom_black nav"></div>
+<div id="products" class="specials_container">
+    {% placeholder "specials-info"%}
     <div class="daily_specials">
         {% placeholder "daily_specials" %}
         {% placeholder "caption_text" %}
     </div>
 </div>
-    <div class="menus">
-        {% placeholder "menus" %}
-    </div>
-    <div class="blackground">
-        <p>Developed by Daniel K Beecroft © 2019</p>
-    </div>
+<div id="video" class="video">
+    {%placeholder "video-txt"%}
+    {% placeholder "video"%}
+</div>
+<div id="contact" class="contact">
+    <h2>Send Me a Message</h2>
+
+    <form action="mailto:brgriska@gmail.com" method="post" enctype="text/plain">
+        Name:<br>
+        <input type="text" name="name"><br>
+        E-mail:<br>
+        <input  type="text" name="mail"><br>
+        Comment:<br>
+        <input class="comment" type="text" name="comment" size="50"><br><br>
+        <input type="submit" value="Send">
+        <input type="reset" value="Reset">
+    </form>
+</div>
+
 {% endblock content %}

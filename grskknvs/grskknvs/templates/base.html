@@ -5,6 +5,7 @@
         <title>{% block title %}This is my new project home page{% endblock title %}</title>
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <link rel="stylesheet" href="{% static 'css/main.css' %}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <style type="text/css">
 
         </style>
@@ -12,7 +13,7 @@
     </head>
     <body>
         {% cms_toolbar %}
-        {% static_placeholder 'logo' %}
+        {% static_placeholder 'logo-knife' %}
         <div class="container">
 
 
@@ -23,17 +24,45 @@
                 <input class="float_right" type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_viewcart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
                 <img class="float_right" alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
                 </form>
-            <div class="blackground nav">
-                <a href="">Contact</a>
-                <a href="">About</a>
-                <a href="">Home</a>
+            <div id="navbar" class="blackground nav">
+                <a id="a" class="translate content-2" href="/en/#products">Products</a>
+                <a id="" class="translate content-2" href="/en/#contact">Contact</a>
+                <a id="" class="translate content-2" href="/en/#video">About</a>
+                <a id="" class="translate content-2" href="/en">Home</a>
+                <div class="dropdown">
+                        <button class="dropbtn">Handmade Goods
+                          <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                          <a href="#">Knives</a>
+                          <a href="#">Pipes</a>
+                          <a href="#">Accessories</a>
+                        </div>
+                      </div>
 
             </div>
             {% block content %}{% endblock content %}
 
             {% static_placeholder 'footer' %}
-
+            <div class="blackground">
+                    <p>Developed by Daniel K Beecroft © 2019</p>
+                </div>
         </div>
         {% render_block "js" %}
+        <script>
+                window.onscroll = function() {myFunction()};
+
+                var navbar = document.getElementById("navbar");
+                var sticky = navbar.offsetTop;
+
+                function myFunction() {
+                  if (window.pageYOffset >= sticky) {
+                    navbar.classList.add("sticky"),
+                    link.classList.remove("translate")
+                  } else {
+                    navbar.classList.remove("sticky");
+                  }
+                }
+                </script>
     </body>
 </html>
