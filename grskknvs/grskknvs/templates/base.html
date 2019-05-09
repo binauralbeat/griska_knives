@@ -25,18 +25,17 @@
                 <img class="float_right" alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
                 </form>
             <div id="navbar" class="blackground nav">
-                <a id="a" class="translate content-2" href="/en/#products">Products</a>
                 <a id="" class="translate content-2" href="/en/#contact">Contact</a>
                 <a id="" class="translate content-2" href="/en/#video">About</a>
                 <a id="" class="translate content-2" href="/en">Home</a>
                 <div class="dropdown">
-                        <button class="dropbtn">Handmade Goods
+                        <button id="button" class=" translate-2 dropbtn">Handmade Goods
                           <i class="fa fa-caret-down"></i>
                         </button>
                         <div class="dropdown-content">
-                          <a href="#">Knives</a>
-                          <a href="#">Pipes</a>
-                          <a href="#">Accessories</a>
+                          <a href="/en/#products">Knives</a>
+                          <a href="/en/#products-2">Pipes</a>
+                          <a href="/en/#products-3">Accessories</a>
                         </div>
                       </div>
 
@@ -53,14 +52,16 @@
                 window.onscroll = function() {myFunction()};
 
                 var navbar = document.getElementById("navbar");
+                var button = document.getElementById("button");
                 var sticky = navbar.offsetTop;
 
                 function myFunction() {
                   if (window.pageYOffset >= sticky) {
-                    navbar.classList.add("sticky"),
-                    link.classList.remove("translate")
+                    navbar.classList.add("sticky")
+                    button.classList.remove("translate-2")
                   } else {
                     navbar.classList.remove("sticky");
+                    button.classList.add("translate-2")
                   }
                 }
                 </script>
